@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Fun Facts</title>
+    <script>
+        const funFacts = [
+            "Bananas are berries, but strawberries aren't.",
+            "Honey never spoils; archaeologists have found honey in ancient Egyptian tombs that is over 3,000 years old.",
+            "A group of flamingos is called a 'flamboyance.'",
+            "Octopuses have three hearts.",
+            "It's impossible to hum while holding your nose.",
+            "Wombat poop is cube-shaped."
+        ];
+
+        function showRandomFact() {
+            const randomIndex = Math.floor(Math.random() * funFacts.length);
+            document.getElementById('fact').innerText = funFacts[randomIndex];
+        }
+
+        window.onload = showRandomFact;
+    </script>
+</head>
+<body>
+    <h1>Random Fun Fact</h1>
+    <p id="fact"></p>
+    <button onclick="showRandomFact()">Show Another Fun Fact</button>
+</body>
+</html>
